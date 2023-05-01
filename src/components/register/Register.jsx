@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const Register = () => {
-    const {x}=useContext(AuthContext);
-    console.log(x);
+        
+    const {creatUserWithEP}=useContext(AuthContext);
     
 
     const handleFormSubmit=(event)=>{
@@ -13,6 +13,15 @@ const Register = () => {
         const email=event.target.email.value;
         const password=event.target.password.value;
         const photo=event.target.photo.value;
+
+        creatUserWithEP(email,password)
+        .then((user) => {
+            console.log(user)
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+            console.log(errorMessage);
+          });
     }
 
 
