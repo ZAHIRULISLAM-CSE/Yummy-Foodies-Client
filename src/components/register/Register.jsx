@@ -2,11 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+
+
+
+    const handleFormSubmit=(event)=>{
+        event.preventDefault();
+        const name=event.target.name.value;
+        const email=event.target.email.value;
+        const password=event.target.password.value;
+        const photo=event.target.photo.value;
+    }
+
+
+
+
   return (
     <div>
       <div className=" mt-7">
         <div className="w-1/2 mt-6   mx-auto">
-          <form onSubmit="" action="">
+          <form onSubmit={handleFormSubmit} action="">
           <div className="relative mt-5 z-0">
               <input
                 type="text"
