@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProviders";
 
 const Register = () => {
-
-
+    const {x}=useContext(AuthContext);
+    console.log(x);
+    
 
     const handleFormSubmit=(event)=>{
         event.preventDefault();
