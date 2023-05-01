@@ -8,7 +8,7 @@ const Nav = () => {
             <div className='text-xl flex flex-col mt-6 md:flex-row gap-5'>
                 <Link>Home</Link>
                 <Link>Blog</Link>
-                <Link>Login</Link>
+                <Link to='/login'>Login</Link>
             </div>
         </div>
     );
