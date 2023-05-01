@@ -1,11 +1,12 @@
 import './App.css'
+import Nav from './components/header/Nav'
 
 function App() {
 
   return (
-    <>
-    <h1>okkk</h1>
-    </>
+    <div className='w-[85%] mx-auto'>
+        <Nav></Nav>
+    </div>
   )
 }
 
