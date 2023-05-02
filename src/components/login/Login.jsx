@@ -8,7 +8,7 @@ import { FaCheckSquare } from "react-icons/fa";
 const Login = () => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
-  const { signInWithEp,signUpWithGoogle } = useContext(AuthContext);
+  const { signInWithEp,signUpWithGoogle,signUpWithGit } = useContext(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -41,6 +41,17 @@ const Login = () => {
           console.log(errorMessage)
         });
   }
+
+    const handleGithubSignin=()=>{
+      signUpWithGit()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      }).catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
+    }
 
 
 
@@ -128,7 +139,7 @@ const Login = () => {
       <div className="flex items-center cursor-pointer  justify-center">
         <span className=" mt-5 flex gap-3 justify-center w-fit items-center p-2 rounded-md  bg-green-700 hover:bg-green-900">
           <FaGoogle></FaGoogle>
-          <h1 className="text-2xl"  >Sign In With Github</h1>
+          <h1 className="text-2xl" onClick={handleGithubSignin}  >Sign In With Github</h1>
         </span>
       </div>
     </div>

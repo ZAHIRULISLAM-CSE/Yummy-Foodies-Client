@@ -9,12 +9,15 @@ import {
 } from "firebase/auth";
 import app from "../components/config/firebase";
 import { GoogleAuthProvider } from "firebase/auth";
+import { GithubAuthProvider } from "firebase/auth";
 
 export const AuthContext = createContext();
 
 const AuthProviders = ({ children }) => {
   const [user, setUser] = useState(null);
   const provider = new GoogleAuthProvider();
+  const gitProvider = new GithubAuthProvider();
+
 
   const auth = getAuth(app);
 
@@ -45,6 +48,12 @@ const AuthProviders = ({ children }) => {
        return signInWithPopup(auth, provider)    
   };
 
+  const signUpWithGit = () => {
+    return signInWithPopup(auth, provider)    
+};
+
+
+
   const shareValue = {
     creatUserWithEP,
     signInWithEp,
@@ -52,7 +61,8 @@ const AuthProviders = ({ children }) => {
     logOut,
     setUser,
     signUpWithGoogle,
-    
+    signUpWithGit
+
   };
   return (
     <div>
