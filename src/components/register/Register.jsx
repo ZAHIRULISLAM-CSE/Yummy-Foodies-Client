@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import { FaExclamationCircle } from "react-icons/fa";
 import { FaCheckSquare } from "react-icons/fa";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
 
@@ -32,6 +33,7 @@ const Register = () => {
 
         creatUserWithEP(email,password)
         .then((user) => {
+            updateNamePhoto(user,name,photo);
             console.log(user);
             setError(null);
             setSuccess('Account Has been Created Succesfully')
@@ -40,6 +42,15 @@ const Register = () => {
             const errorMessage = error.message;
             console.log(errorMessage);
           });
+    }
+
+
+    const updateNamePhoto=(user,name,photo)=>{
+      updateProfile(user.user, {
+        displayName:name, photoURL:photo
+      }).then(() => {
+      }).catch((error) => {
+      });
     }
 
 
