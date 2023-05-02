@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import app from '../components/config/firebase';
 export const AuthContext = createContext();
 
@@ -10,11 +10,15 @@ const AuthProviders = ({children}) => {
         return createUserWithEmailAndPassword(auth,email,password);
     }
 
+    const signInWithEp=(email,password)=>{
+        return signInWithEmailAndPassword(auth,email,password);
+    }
+
 
 
 
     const shareValue = {
-        creatUserWithEP
+        creatUserWithEP,signInWithEp,
       };
     return (
         <div>

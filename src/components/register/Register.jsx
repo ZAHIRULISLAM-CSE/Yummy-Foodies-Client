@@ -3,6 +3,7 @@ import { AuthContext } from "../../providers/AuthProviders";
 import { FaExclamationCircle } from "react-icons/fa";
 import { FaCheckSquare } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 const Register = () => {
 
@@ -36,7 +37,8 @@ const Register = () => {
             updateNamePhoto(user,name,photo);
             console.log(user);
             setError(null);
-            setSuccess('Account Has been Created Succesfully')
+            setSuccess('Account Has been Created Succesfully');
+            event.target.reset();
           })
           .catch((error) => {
             const errorMessage = error.message;
@@ -127,6 +129,7 @@ const Register = () => {
               Register
             </button>
           </form>
+          <p className="mt-2">Already have an account?<Link to='/login'><span className="text-blue-700 cursor-pointer ">Login</span></Link></p>
           <div>
               {
                 error?
@@ -160,5 +163,4 @@ const Register = () => {
     </div>
   );
 };
-
 export default Register;
