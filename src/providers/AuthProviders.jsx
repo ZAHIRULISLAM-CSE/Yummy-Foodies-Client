@@ -1,9 +1,13 @@
-import React, { createContext } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import React, { createContext, useEffect, useState } from 'react';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import app from '../components/config/firebase';
 export const AuthContext = createContext();
 
 const AuthProviders = ({children}) => {
+
+    const [user,setUser]=useState(null);
+
+
     const auth = getAuth(app);
 
     const creatUserWithEP=(email,password)=>{
@@ -14,11 +18,19 @@ const AuthProviders = ({children}) => {
         return signInWithEmailAndPassword(auth,email,password);
     }
 
+    useEffect(()=>{
+     const unSubscribe=onAuthStateChanged(auth, (loogedUser) => {
+        setUser(loogedUser);
+    });
 
+        return ()=>{
+            unSubscribe();
+        }
+    },[])
 
 
     const shareValue = {
-        creatUserWithEP,signInWithEp,
+        creatUserWithEP,signInWithEp,user
       };
     return (
         <div>
