@@ -1,8 +1,12 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
+import { FaExclamationCircle } from "react-icons/fa";
+import { FaCheckSquare } from "react-icons/fa";
 
 const Register = () => {
+
+    const [error,setError]=useState(null);
+    const [success,setSuccess]=useState(null);
         
     const {creatUserWithEP}=useContext(AuthContext);
     
@@ -14,17 +18,29 @@ const Register = () => {
         const password=event.target.password.value;
         const photo=event.target.photo.value;
 
+        if(name.length==0 || email.length==0 || password.length==0 || photo.length==0 ){
+            setSuccess(null);
+            setError('Please fill the all the input fields');
+            return;
+        }
+
+        if(password.length < 6){
+          setSuccess(null);
+          setError('Password Length must me minimum 6 character');
+          return;
+        }
+
         creatUserWithEP(email,password)
         .then((user) => {
-            console.log(user)
+            console.log(user);
+            setError(null);
+            setSuccess('Account Has been Created Succesfully')
           })
           .catch((error) => {
             const errorMessage = error.message;
             console.log(errorMessage);
           });
     }
-
-
 
 
   return (
@@ -100,6 +116,34 @@ const Register = () => {
               Register
             </button>
           </form>
+          <div>
+              {
+                error?
+                 <div className="flex mt-2 items-center gap-2">
+                      <div className="text-red-600">
+                        <FaExclamationCircle></FaExclamationCircle>
+                      </div>
+                      <div className="text-red-600">
+                          {error}
+                      </div>
+                </div>
+                :""
+              }
+          </div>
+          <div>
+              {
+                success?
+                 <div className="flex mt-2 items-center gap-2">
+                      <div className="text-green-600">
+                        <FaCheckSquare></FaCheckSquare>
+                      </div>
+                      <div className="text-green-600">
+                          {success}
+                      </div>
+                </div>
+                :""
+              }
+          </div>
         </div>
       </div>
     </div>
