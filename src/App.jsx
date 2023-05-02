@@ -5,7 +5,7 @@ import Nav from './components/header/Nav'
 function App() {
 
   return (
-    <div className='w-[85%] mx-auto'>
+    <div className=''>
         <Nav></Nav>
         <Outlet></Outlet>
     </div>

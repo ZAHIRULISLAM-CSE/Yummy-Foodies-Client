@@ -12,9 +12,9 @@ const Nav = () => {
 
 
   return (
-    <div className=" text-center md:flex justify-between items-center  p-4 md:p-6">
-      <Link className="text-4xl">Yummy Foodies</Link>
-      <div className="text-xl flex items-center flex-col mt-6 md:flex-row gap-5">
+    <div className=" text-center w-[85%] mx-auto md:flex justify-between items-center py-4">
+      <Link className="text-4xl font-serif text-[#1797a0]">Yummy Foodies</Link>
+      <div className="text-xl text-[#1797a0] flex items-center flex-col mt-6 md:flex-row gap-5">
         <Link>Home</Link>
         <Link>Blog</Link>
         {user ? (
