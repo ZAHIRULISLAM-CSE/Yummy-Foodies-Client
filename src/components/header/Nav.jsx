@@ -10,6 +10,7 @@ const Nav = () => {
     logOut();
   };
 
+
   return (
     <div className=" text-center md:flex justify-between items-center  p-4 md:p-6">
       <Link className="text-4xl">Yummy Foodies</Link>

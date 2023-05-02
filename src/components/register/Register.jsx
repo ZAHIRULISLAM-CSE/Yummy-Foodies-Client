@@ -10,7 +10,7 @@ const Register = () => {
     const [error,setError]=useState(null);
     const [success,setSuccess]=useState(null);
         
-    const {creatUserWithEP}=useContext(AuthContext);
+    const {creatUserWithEP,setUser}=useContext(AuthContext);
     
 
     const handleFormSubmit=(event)=>{
@@ -39,6 +39,7 @@ const Register = () => {
             setError(null);
             setSuccess('Account Has been Created Succesfully');
             event.target.reset();
+            setUser(user);
           })
           .catch((error) => {
             const errorMessage = error.message;
