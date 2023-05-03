@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData, useNavigation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { FaRecordVinyl } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { FaServer } from "react-icons/fa";

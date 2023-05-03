@@ -7,11 +7,13 @@ import Login from "../login/Login";
 import Register from "../register/Register";
 import Home from "../homepage/Home";
 import SingleChefReceipe from "../chef_receipes/SingleChefReceipe";
+import Error from "../errorPage/Error";
 
   const router = createBrowserRouter([
     {
       path: "/",
       element:<App></App>,
+      errorElement:<Error></Error>,
       children:[
         {
           path: "/",
@@ -28,7 +30,6 @@ import SingleChefReceipe from "../chef_receipes/SingleChefReceipe";
         {
           path: "/chefRecipe/:id",
           element:<SingleChefReceipe></SingleChefReceipe>,
-          // loader:({params})=>fetch(`http://localhost:3000/chefReceipe/${params.id}`)
         }
       ]
     },
