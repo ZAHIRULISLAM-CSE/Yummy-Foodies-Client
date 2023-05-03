@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LazyLoad from 'react-lazy-load';
 
 const ChefInfoCard = (props) => {
   const { chef_img, chef_name, experience, likes, number_of_receipe,id } =
@@ -7,12 +8,13 @@ const ChefInfoCard = (props) => {
   return (
     <div className="w-[85%] mb-6 mx-auto">
       <div className="max-w-sm bg-slate-600   rounded-lg shadow dark:bg-gray-800">
-       
+      <LazyLoad height={240} onContentVisible={() => {console.log('loaded!')}}  width={375} threshold={0.5}>
           <img
-            className="rounded-t-lg"
+            className=" w-[85%] md:w-full rounded-t-lg"
             src={chef_img}
             alt=""
           />
+        </LazyLoad>
         <div className="p-5">
             <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-300 dark:text-white">
               Name:{chef_name}
