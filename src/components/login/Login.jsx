@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 import { FaExclamationCircle } from "react-icons/fa";
@@ -138,7 +139,7 @@ const Login = () => {
       </div>
       <div className="flex items-center cursor-pointer  justify-center">
         <span className=" mt-5 flex gap-3 justify-center w-fit items-center p-2 rounded-md  bg-green-700 hover:bg-green-900">
-          <FaGoogle></FaGoogle>
+          <FaGithub></FaGithub>
           <h1 className="text-2xl" onClick={handleGithubSignin}  >Sign In With Github</h1>
         </span>
       </div>
