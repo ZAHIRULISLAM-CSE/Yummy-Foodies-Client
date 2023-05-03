@@ -8,6 +8,7 @@ import Register from "../register/Register";
 import Home from "../homepage/Home";
 import SingleChefReceipe from "../chef_receipes/SingleChefReceipe";
 import Error from "../errorPage/Error";
+import Blog from "../blogs/Blog";
 
   const router = createBrowserRouter([
     {
@@ -20,15 +21,19 @@ import Error from "../errorPage/Error";
           element:<Home></Home>
         },
         {
-            path: "/login",
+            path: "login",
             element:<Login></Login>
         },
         {
-            path: "/register",
+            path: "register",
             element:<Register></Register>,
         },
         {
-          path: "/chefRecipe/:id",
+          path: "blog",
+          element:<Blog></Blog>,
+        },
+        {
+          path: "chefRecipe/:id",
           element:<SingleChefReceipe></SingleChefReceipe>,
         }
       ]

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const Nav = () => {
@@ -13,10 +13,10 @@ const Nav = () => {
 
   return (
     <div className=" text-center w-[85%] mx-auto md:flex justify-between items-center py-4">
-      <Link className="text-4xl font-serif text-[#1797a0]">Yummy Foodies</Link>
-      <div className="text-xl text-[#1797a0] flex items-center flex-col mt-6 md:flex-row gap-5">
-        <Link>Home</Link>
-        <Link>Blog</Link>
+      <Link to="/" className="text-4xl font-serif text-[#1797a0]">Yummy Foodies</Link>
+      <div className="text-xl  flex items-center flex-col mt-6 md:flex-row gap-5">
+        <NavLink to='/'  className={({ isActive }) => (isActive ? 'active' : 'default')}  end >Home</NavLink>
+        <NavLink to='/blog' className={({ isActive }) => (isActive ? 'active' : 'default')}  >Blog</NavLink>
         {user ? (
           <div className="flex items-center">
             <div className="group flex relative">
@@ -35,7 +35,7 @@ const Nav = () => {
             </span>
           </div>
         ) : (
-          <Link to="/login">Login</Link>
+          <NavLink className={({ isActive }) => (isActive ? 'active' : 'default')}  to="/login">Login</NavLink>
         )}
       </div>
     </div>
