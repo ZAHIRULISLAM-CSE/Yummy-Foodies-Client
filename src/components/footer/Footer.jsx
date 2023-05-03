@@ -5,7 +5,11 @@ const Footer = () => {
     <div>
       <footer className="w-[85%] mt-12 mx-auto">
         <div className="mx-auto w-full max-w-screen-xl">
-          <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-5">
+            <div>
+                <h1 className="text-xl font-semibold uppercase   text-black">Yummy Foodies</h1>
+                <p className="text-sm text-gray-300 mt-6">Unleash your inner gourmet with our food chef website. Discover tantalizing recipes, expert tips, and endless inspiration. Elevate your cooking game and join our community of foodies. Start your journey to culinary perfection today!</p>
+            </div>
             <div>
               <h2 className="mb-6  font-semibold text-xl  text-black uppercase">
                 Company

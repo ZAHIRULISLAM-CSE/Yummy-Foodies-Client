@@ -14,7 +14,7 @@ const ChefInfoCard = (props) => {
             alt=""
           />
         <div className="p-5">
-            <h5 className="mb-2 text-xl font-bold tracking-tight text-black dark:text-white">
+            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-300 dark:text-white">
               Name:{chef_name}
             </h5>
           <p className="mb-3 text-xl font-normal text-black">
