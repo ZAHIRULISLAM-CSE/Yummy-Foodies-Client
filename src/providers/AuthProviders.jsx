@@ -49,7 +49,7 @@ const AuthProviders = ({ children }) => {
   };
 
   const signUpWithGit = () => {
-    return signInWithPopup(auth, provider)    
+    return signInWithPopup(auth, gitProvider)    
 };
 
 

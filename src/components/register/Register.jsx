@@ -3,14 +3,17 @@ import { AuthContext } from "../../providers/AuthProviders";
 import { FaExclamationCircle } from "react-icons/fa";
 import { FaCheckSquare } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
 
     const [error,setError]=useState(null);
     const [success,setSuccess]=useState(null);
         
-    const {creatUserWithEP,setUser}=useContext(AuthContext);
+    const {creatUserWithEP,setUser,logOut}=useContext(AuthContext);
+
+    const navigate=useNavigate();
+    const state = "/";
     
 
     const handleFormSubmit=(event)=>{
@@ -19,6 +22,8 @@ const Register = () => {
         const email=event.target.email.value;
         const password=event.target.password.value;
         const photo=event.target.photo.value;
+
+        
 
         if(name.length==0 || email.length==0 || password.length==0 || photo.length==0 ){
             setSuccess(null);
@@ -40,6 +45,8 @@ const Register = () => {
             setSuccess('Account Has been Created Succesfully');
             event.target.reset();
             setUser(user);
+            logOut();
+            navigate(state,{replace:true});
           })
           .catch((error) => {
             const errorMessage = error.message;

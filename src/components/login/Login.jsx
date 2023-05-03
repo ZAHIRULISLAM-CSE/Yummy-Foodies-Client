@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 import { FaExclamationCircle } from "react-icons/fa";
 import { FaCheckSquare } from "react-icons/fa";
@@ -10,6 +10,10 @@ const Login = () => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const { signInWithEp,signUpWithGoogle,signUpWithGit } = useContext(AuthContext);
+
+  const navigate=useNavigate();
+  const state = "/";
+
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -23,6 +27,7 @@ const Login = () => {
         const loggedUser = user.user;
         console.log(loggedUser);
         event.target.reset();
+        navigate(state,{replace:true});
       })
       .catch((error) => {
         setSuccess(null);
@@ -36,7 +41,7 @@ const Login = () => {
         signUpWithGoogle()
         .then((result) => {
           const user = result.user;
-          console.log(user);
+          navigate(state,{replace:true});
         }).catch((error) => {
           const errorMessage = error.message;
           console.log(errorMessage)
@@ -48,6 +53,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        navigate(state,{replace:true});
       }).catch((error) => {
         const errorMessage = error.message;
         console.log(errorMessage);
