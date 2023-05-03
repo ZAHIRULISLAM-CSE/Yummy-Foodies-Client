@@ -9,6 +9,7 @@ import Home from "../homepage/Home";
 import SingleChefReceipe from "../chef_receipes/SingleChefReceipe";
 import Error from "../errorPage/Error";
 import Blog from "../blogs/Blog";
+import PrivateRoute from "./PrivateRoute";
 
   const router = createBrowserRouter([
     {
@@ -34,7 +35,7 @@ import Blog from "../blogs/Blog";
         },
         {
           path: "chefRecipe/:id",
-          element:<SingleChefReceipe></SingleChefReceipe>,
+          element:<PrivateRoute><SingleChefReceipe></SingleChefReceipe></PrivateRoute>,
         }
       ]
     },
