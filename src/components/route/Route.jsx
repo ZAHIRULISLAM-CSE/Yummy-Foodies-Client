@@ -28,7 +28,7 @@ import SingleChefReceipe from "../chef_receipes/SingleChefReceipe";
         {
           path: "/chefRecipe/:id",
           element:<SingleChefReceipe></SingleChefReceipe>,
-          loader:({params})=>fetch(`http://localhost:3000/chefReceipe/${params.id}`)
+          // loader:({params})=>fetch(`http://localhost:3000/chefReceipe/${params.id}`)
         }
       ]
     },
