@@ -1,5 +1,6 @@
 import React from "react";
 import ReactToPdf from "react-to-pdf";
+import { FaFileDownload } from "react-icons/fa";
 
 const Blog = () => {
   const ref = React.createRef();
@@ -9,7 +10,7 @@ const Blog = () => {
       <div>
         <ReactToPdf targetRef={ref} noData={true} scale={0.7} filename="blogs.pdf">
           {({ toPdf }) => <div className="text-center mt-6">
-          <button className=" text-2xl  mb-8 p-3 bg-blue-600 rounded-xl " onClick={toPdf}>Generate Blog pdf</button>
+          <button className=" text-2xl  mb-8 p-3 bg-blue-600 rounded-xl " >Generate Blog pdf<FaFileDownload onClick={toPdf} className="ml-20 mt-4"></FaFileDownload></button>
           </div> }
         </ReactToPdf>
         <div ref={ref} className=" w-4/5 mt-12 mx-auto">

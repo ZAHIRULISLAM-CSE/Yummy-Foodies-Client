@@ -8,9 +8,9 @@ const ChefInfoCard = (props) => {
   return (
     <div className="w-[85%] mb-6 mx-auto">
       <div className="max-w-sm bg-slate-600   rounded-lg shadow dark:bg-gray-800">
-      <LazyLoad height={240} onContentVisible={() => {console.log('loaded!')}}  width={375} threshold={0.5}>
+      <LazyLoad height={240} width="" onContentVisible={() => {console.log('loaded!')}}   threshold={0.5}>
           <img
-            className=" w-[85%] md:w-full rounded-t-lg"
+            className=" w-full md:w-full rounded-t-lg"
             src={chef_img}
             alt=""
           />
