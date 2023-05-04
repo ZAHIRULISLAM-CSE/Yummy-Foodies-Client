@@ -64,7 +64,8 @@ const Login = () => {
 
 
   return (
-    <div className=" mt-7">
+    <div className="bg-cover  py-16 bg-no-repeat bg-center h-screen" style={{backgroundImage: "url('images/banner-bg1.jpg')", opacity: 0.7}}>
+      <h1 className="text-4xl text-center mb-16">Please Login Here!!!</h1>
       <div className="w-1/2 mt-6   mx-auto">
         <form onSubmit={handleLogin} action="">
           <div className="relative mt-5 z-0">
@@ -77,7 +78,7 @@ const Login = () => {
             />
             <label
               htmlFor="floating_standard"
-              className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Email
             </label>
@@ -92,7 +93,7 @@ const Login = () => {
             />
             <label
               htmlFor="floating_standard"
-              className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="absolute text-sm text-gray-300 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Password
             </label>
@@ -107,7 +108,7 @@ const Login = () => {
         <p>
           Don't have an account yet?
           <Link to="/register">
-            <span className="text-blue-700 cursor-pointer ">Register</span>
+            <span className="bg-blue-700 p-1 rounded-xl cursor-pointer ">Register</span>
           </Link>
         </p>
         <div>
