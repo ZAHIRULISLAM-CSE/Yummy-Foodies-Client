@@ -1,8 +1,8 @@
 import React from 'react';
-// import img1 from '../../../public/images'
 
 
 const Bannar = () => {
+   //banner section with bg image and text
     return (
         <div className="bg-cover  bg-no-repeat bg-center h-screen" style={{backgroundImage: "url('images/banner-bg1.jpg')", opacity: 0.7}}>
 

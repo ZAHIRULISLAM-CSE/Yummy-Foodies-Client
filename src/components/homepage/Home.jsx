@@ -5,6 +5,9 @@ import Reviews from '../customerReviews/Reviews';
 import WhyToChooseUs from '../whytochoose/WhyToChooseUs';
 
 const Home = () => {
+
+    //components which will show in home
+
     return (
         <div>
             <Bannar></Bannar>

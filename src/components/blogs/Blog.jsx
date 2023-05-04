@@ -3,6 +3,8 @@ import ReactToPdf from "react-to-pdf";
 import { FaFileDownload } from "react-icons/fa";
 
 const Blog = () => {
+
+  //react to pdf ref
   const ref = React.createRef();
 
   return (

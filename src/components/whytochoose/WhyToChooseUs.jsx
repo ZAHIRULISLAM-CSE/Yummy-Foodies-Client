@@ -4,6 +4,9 @@ import { FaCalendarPlus } from "react-icons/fa";
 import { FaUserSecret } from "react-icons/fa";
 
 const WhyToChooseUs = () => {
+
+  //why to code section
+
   return (
     <div className="text-gray-300 w-[85%] mx-auto">
       <h1 className="text-center  mt-8 text-4xl font-semibold">

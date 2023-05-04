@@ -1,6 +1,8 @@
 import React from "react";
 
 const Reviews = () => {
+
+  //customer review section js code
   return (
     <div className="w-[85%] mt-12 mx-auto">
       <div className="text-center mb-12 text-4xl font-semibold">

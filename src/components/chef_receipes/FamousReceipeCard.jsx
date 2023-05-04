@@ -5,13 +5,14 @@ import 'react-toastify/dist/ReactToastify.css';
 const FamousReceipeCard = (props) => {
     const [dis,setDis]=useState(false);
 
+
+    //handle toast function
     const handleToast=()=>{
         setDis(true);
         toast("The recipe is Now your favourite!");
     }
 
 
-  console.log(props.data);
   const { name, ingredients, cooking_method, rating } = props.data;
   return (
     <div className="mt-12 ">

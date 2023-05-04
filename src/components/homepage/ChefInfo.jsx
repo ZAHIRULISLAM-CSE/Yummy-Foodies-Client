@@ -6,6 +6,8 @@ const ChefInfo = () => {
   const [chefInfoData, setChefInfoData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
+
+  //destructure data for chef info
   useEffect(() => {
     fetch("https://yummy-foodies-server-zahirulislam-cse.vercel.app/chefinfo")
       .then((res) => res.json())

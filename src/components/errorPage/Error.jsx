@@ -3,7 +3,11 @@ import { Link, useRouteError } from "react-router-dom";
 import img from "/images/504708-200.png"
 
 const Error = () => {
+
+  //destructure error and status for further use
   const { error, status } = useRouteError();
+
+
   return (
     <div>
         <h1 className="text-6xl font-extrabold text-red-500  p-8 text-center">Some Error Occured</h1>

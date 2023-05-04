@@ -10,7 +10,9 @@ const SingleChefReceipe = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [receipeData, setReceipeData] = useState();
     const { id } = useParams();
+ 
 
+    //loading chefReceipe data using useEffect
     useEffect(() => {
         fetch(`https://yummy-foodies-server-zahirulislam-cse.vercel.app/chefReceipe/${id}`)
           .then((res) => res.json())

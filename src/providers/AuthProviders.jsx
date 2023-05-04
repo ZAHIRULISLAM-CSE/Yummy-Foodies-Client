@@ -17,19 +17,23 @@ const AuthProviders = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading,setLoding]=useState(true);
 
+  //setting up the provider
   const provider = new GoogleAuthProvider();
   const gitProvider = new GithubAuthProvider();
 
 
   const auth = getAuth(app);
 
+  //function for sign up with email and pass
   const creatUserWithEP = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  //function for sign in with email and pass
   const signInWithEp = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
+
 
   const logOut = () => {
     signOut(auth)
@@ -47,9 +51,13 @@ const AuthProviders = ({ children }) => {
     };
   }, []);
 
+  //function for sign in with google
+
   const signUpWithGoogle = () => {
        return signInWithPopup(auth, provider)    
   };
+
+    //function for sign in with github
 
   const signUpWithGit = () => {
     return signInWithPopup(auth, gitProvider)    
