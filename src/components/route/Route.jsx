@@ -36,6 +36,10 @@ import PrivateRoute from "./PrivateRoute";
         {
           path: "chefRecipe/:id",
           element:<PrivateRoute><SingleChefReceipe></SingleChefReceipe></PrivateRoute>,
+        },
+        {
+          path: "*",
+          element:<Error></Error>,
         }
       ]
     },
