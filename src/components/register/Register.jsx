@@ -13,7 +13,8 @@ const Register = () => {
     const {creatUserWithEP,setUser,logOut}=useContext(AuthContext);
 
     const navigate=useNavigate();
-    const state = "/";
+    const state = "/login";
+
     
 
     const handleFormSubmit=(event)=>{
@@ -27,13 +28,13 @@ const Register = () => {
 
         if(name.length==0 || email.length==0 || password.length==0 || photo.length==0 ){
             setSuccess(null);
-            setError('Please fill the all the input fields');
+            setError('Unsuccessfull,Please fill  all the input fields and try again');
             return;
         }
 
         if(password.length < 6){
           setSuccess(null);
-          setError('Password Length must me minimum 6 character');
+          setError('Password Length must be minimum 6 character');
           return;
         }
 
@@ -50,7 +51,8 @@ const Register = () => {
           })
           .catch((error) => {
             const errorMessage = error.message;
-            console.log(errorMessage);
+            setSuccess(null);
+            setError(errorMessage);
           });
     }
 
