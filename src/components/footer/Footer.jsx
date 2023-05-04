@@ -32,7 +32,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <a  className="hover:underline">
-                   News
+                   Foods
                   </a>
                 </li>
               </ul>

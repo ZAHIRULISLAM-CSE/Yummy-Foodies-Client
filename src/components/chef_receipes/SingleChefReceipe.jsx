@@ -12,7 +12,7 @@ const SingleChefReceipe = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:3000/chefReceipe/${id}`)
+        fetch(`https://yummy-foodies-server-zahirulislam-cse.vercel.app/chefReceipe/${id}`)
           .then((res) => res.json())
           .then((data) => setReceipeData(data));
           setIsLoading(false);

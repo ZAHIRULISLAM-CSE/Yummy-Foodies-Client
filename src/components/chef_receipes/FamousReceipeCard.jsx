@@ -7,7 +7,7 @@ const FamousReceipeCard = (props) => {
 
     const handleToast=()=>{
         setDis(true);
-        toast("Wow so easy!");
+        toast("The recipe is Now your favourite!");
     }
 
 
