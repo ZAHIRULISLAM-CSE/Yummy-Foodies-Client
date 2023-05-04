@@ -12,12 +12,12 @@ const WhyToChooseUs = () => {
       <h1 className="text-center  mt-8 text-4xl font-semibold">
         Why To Choose Us
       </h1>
-      <div className="grid mt-12 mb-12  md:mt-20 grid-cols-1  md:grid-cols-3">
+      <div className="grid mt-12 mb-12 bg-gray-600 p-3 rounded-xl  md:mt-20 grid-cols-1  md:grid-cols-3">
         <div className="flex items-center gap-3">
           <div>
             <FaAdn></FaAdn>
           </div>
-          <div>
+          <div className="mb-3">
             <h1 className="text-2xl font-bold">15</h1>
             <p className="text-2xl font-semibold">Years of Experience</p>
           </div>
@@ -27,7 +27,7 @@ const WhyToChooseUs = () => {
             <FaCalendarPlus></FaCalendarPlus>
           </div>
           <div>
-            <h1 className="text-2xl font-bold">2500</h1>
+            <h1 className="text-2xl font-bold">25000</h1>
             <p className="text-2xl font-semibold">Orders Delivery</p>
           </div>
         </div>
