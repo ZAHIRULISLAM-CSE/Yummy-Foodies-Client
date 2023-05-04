@@ -144,7 +144,7 @@ const Register = () => {
           <div>
               {
                 error?
-                 <div className="flex mt-2 items-center gap-2">
+                 <div className="flex bg-blue-100 p-1 rounded-xl mt-2 items-center gap-2">
                       <div className="text-red-600">
                         <FaExclamationCircle></FaExclamationCircle>
                       </div>

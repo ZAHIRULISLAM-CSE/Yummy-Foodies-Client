@@ -113,8 +113,8 @@ const Login = () => {
         </p>
         <div>
           {error ? (
-            <div className="flex mt-2 items-center gap-2">
-              <div className="text-red-600">
+            <div className="flex bg-blue-100 p-1 rounded-xl mt-4  items-center gap-2">
+              <div className="   text-red-600">
                 <FaExclamationCircle></FaExclamationCircle>
               </div>
               <div className="text-red-600">{error}</div>
