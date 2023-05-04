@@ -55,7 +55,7 @@ const WhyToChooseUs = () => {
                 always.
               </p>
             </h5>
-            <button className="bg-blue-600 rounded-xl p-3">Order Now</button>
+            <button className="bg-blue-600 mt-4  rounded-xl p-3">Select Best Chef Now</button>
           </div>
         </div>
         <div className="max-w-sm  dark:bg-gray-800">
@@ -71,7 +71,7 @@ const WhyToChooseUs = () => {
               When ingredients are fresh, they are at their peak flavor and nutritional value, and this translates into better-tasting dishes for your customers,so thats why our chef focus on to provide fresh food with fresh ingredients.
               </p>
             </h5>
-            <button className="bg-blue-600 mt-4 rounded-xl p-3">Order Now</button>
+            <button className="bg-blue-600 mt-4 rounded-xl p-3">Select Best Chef Now</button>
           </div>
         </div>
         <div className="max-w-sm  dark:bg-gray-800">
@@ -87,7 +87,7 @@ const WhyToChooseUs = () => {
               In addition to satisfying customers' diverse tastes and preferences,Our chef offers variety of Bangladeshi delicious food,so you can order here many foods from our famous chef.
               </p>
             </h5>
-            <button className="bg-blue-600 mb-12 mt-4 rounded-xl p-3">Order Now</button>
+            <button className="bg-blue-600 mb-12 mt-4 rounded-xl p-3">Select Best Chef Now</button>
           </div>
         </div>
       </div>

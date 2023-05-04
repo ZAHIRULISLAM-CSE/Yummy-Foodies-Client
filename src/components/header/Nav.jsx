@@ -4,7 +4,6 @@ import { AuthContext } from "../../providers/AuthProviders";
 
 const Nav = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
 
   const handleSignOut = () => {
     logOut();
@@ -24,7 +23,7 @@ const Nav = () => {
               <img className="h-8 w-8 rounded-full" src={user.photoURL} alt="" />
             </span>
               <span
-                className="group-hover:opacity-100 transition-opacity bg-blue-600 px-1 text-xl text-gray-100 rounded-md absolute left-1/2 
+                className="group-hover:opacity-100 transition-opacity bg-blue-600 px-1 text-xs text-gray-100 rounded-md absolute left-1/2 
     -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto"
               >
                {user.displayName}

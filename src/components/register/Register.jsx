@@ -41,7 +41,6 @@ const Register = () => {
         creatUserWithEP(email,password)
         .then((user) => {
             updateNamePhoto(user,name,photo);
-            console.log(user);
             setError(null);
             setSuccess('Account Has been Created Succesfully');
             event.target.reset();
@@ -53,6 +52,7 @@ const Register = () => {
             const errorMessage = error.message;
             setSuccess(null);
             setError(errorMessage);
+            console.log(errorMessage);
           });
     }
 

@@ -32,8 +32,6 @@ const Login = () => {
       .catch((error) => {
         setSuccess(null);
         setError("Provide Valid Email and Password");
-        const errorMessage = error.message;
-        console.log(errorMessage);
       });
   };
 
@@ -44,7 +42,8 @@ const Login = () => {
           navigate(state,{replace:true});
         }).catch((error) => {
           const errorMessage = error.message;
-          console.log(errorMessage)
+          setSuccess(null);
+          setError(errorMessage);
         });
   }
 
@@ -52,11 +51,11 @@ const Login = () => {
       signUpWithGit()
       .then((result) => {
         const user = result.user;
-        console.log(user);
         navigate(state,{replace:true});
       }).catch((error) => {
         const errorMessage = error.message;
-        console.log(errorMessage);
+        setSuccess(null);
+        setError(errorMessage);
       });
     }
 
