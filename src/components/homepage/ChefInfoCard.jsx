@@ -11,7 +11,7 @@ const ChefInfoCard = (props) => {
   return (
     <div className="w-[85%] mb-6 mx-auto">
       <div className="max-w-sm bg-slate-600   rounded-lg shadow dark:bg-gray-800">
-      <LazyLoad height={240} width="" onContentVisible={() => {console.log('loaded!')}}   threshold={0.5}>
+      <LazyLoad height={240} width="" onContentVisible={() => {console.log('loaded!')}}   threshold={0.7}>
           <img
             className=" w-full md:w-full rounded-t-lg"
             src={chef_img}
